@@ -19,7 +19,7 @@ body {
 .content {
     background-color: #ffffff;
     border-radius: 15px;
-    width: 80%;
+    width: 960px;
     height: 50%;
     display: flex;
     justify-content: space-between;
@@ -33,6 +33,10 @@ body {
     background-color: #58af9b;
     width: 40%;
     height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    left: 60%;
 }
 
 .title {
@@ -44,11 +48,22 @@ body {
     color: #ffffff;
 }
 
+.title-second {
+    color: #58af9b;
+}
+
 .description {
     font-size: 14px;
     font-weight: 300;
-    color: #ffffff;
     line-height: 30px;
+}
+
+.description-primary {
+    color: #ffffff;
+}
+
+.description-second {
+    color: #95a5a6;
 }
 
 .btn {
@@ -60,6 +75,9 @@ body {
     cursor: pointer;
     font-weight: bold;
     outline: none;
+    width: 150px;
+    align-self: center;
+    border: none;
 }
 
 .btn-primary {
@@ -72,8 +90,19 @@ body {
     color: #58af9b;
 }
 
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+}
+
+.btn-second:hover {
+    background-color: #ffffff;
+    color: #58af9b;
+}
+
 .first-content {
     display: flex;
+    display: none;
 }
 
 .first-column {
@@ -84,18 +113,84 @@ body {
 
 .second-column {
     flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-social-media:not(.first-child) {
+    margin-left: 10px;
+}
+
+.link-social-media .item-social-media:hover {
+    background-color: #58af9b;
+    color: #ffffff;
+    border: #58af9b;
 }
 
 .list-social-media {
     display: flex;
+    list-style: none;
+}
+
+.item-social-media {
+    border: 1px solid #ecf0f1;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    width: 55%;
+    text-align: center;
 }
+
+.form input {
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+    outline: none;
+}
+
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+/* second content */
 
 .second-content {
     position: absolute;
-    display: none;
+    display: flex;
+}
+
+.second-content .first-column {
+    order: 2;
+}
+
+.second-content .second-column {
+    order: 1;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.password::first-letter {
+    text-transform: capitalize;
 }
